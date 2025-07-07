@@ -188,12 +188,11 @@ try:
 
         efficiency_file.save(EXCEL_FILE_PATH)
 
-    print("\n--- 测量扫描完成 ---")
+    print("测描完成")
 
 
 # 清理
 finally:
-    print("\n--- 正在清理并关闭仪器 ---")
     if load:
         load.write('LOAD OFF') # 关闭电子负载
         load.close()
