@@ -4,7 +4,7 @@ from openpyxl import Workbook
 
 # 配置
 
-# Excel文件配置，可按照需求更改变量名（等号前的参数）
+# Excel文件配置，可按照需求更改变量名（等号前的参数）或增加变量类型，注意，若在此处修改或增加变量，需要在“向工作表写入表头”部分也进行修改并在后续的测量或计算中定义
 
 EXCEL_FILE_PATH = r'E:\AutomaticEfficiencyForPlusCurrent\test_data_chinese.xlsx'
 VIN_COL = 'A'
