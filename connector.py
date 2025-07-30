@@ -4,7 +4,7 @@ from openpyxl import Workbook
 
 # 配置
 
-# Excel文件配置
+# Excel文件配置，可按照需求更改变量名（等号前的参数）
 
 EXCEL_FILE_PATH = r'E:\AutomaticEfficiencyForPlusCurrent\test_data_chinese.xlsx'
 VIN_COL = 'A'
@@ -15,12 +15,12 @@ EFF_SYS_COL = 'E'
 PLOSS_SYS_COL = 'F'
 
 # 测量配置
-# 测量输入电流的采样电阻值
+# 测量输入电流的采样电阻值（按需求更改）
 IIN_SHUNT_RESISTOR = 0.01
 # 测量输出电流的采样电阻值
 IOUT_SHUNT_RESISTOR = 0.001
 
-# 设备visa地址
+# 设备visa地址（按实际情况更改）
 LOAD_ADDRESS = 'ASRL7::INSTR'
 VIN_ADDRESS = 'USB0::0x1698::0x0837::002000002608::INSTR'
 VCC_ADDRESS = 'USB0::0x1AB1::0x0E11::DP8C193003485::INSTR'
@@ -33,6 +33,7 @@ DAQ_ADDRESS = 'USB0::0x0957::0x2007::MY49029470::INSTR'
 try:
     efficiency_file = Workbook()
     print('成功创建新的Excel工作簿。')
+    
 except IOError:
     print('错误：创建Excel工作簿失败。')
     exit() # 如果文件无法创建则退出
@@ -77,7 +78,7 @@ try:
 
     # 仪器设置
 
-    # 配置电子负载
+    # 配置电子负载，可按实际需求更改
     load.write('CONF:REM ON')  # 启用远程控制
     load.write('CHAN 3')       # 选择通道3，可更改
     load.write('MODE CCH')     # 设置为恒流高精度模式
